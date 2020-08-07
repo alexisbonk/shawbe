@@ -1,39 +1,38 @@
 import { StyleSheet, Dimensions } from 'react-native';
+
 export default StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center'
+        flexGrow: 1,
     },
-    input: {
-        height: 48,
-        borderRadius: 5,
-        overflow: 'hidden',
+    titlebox: {
+        height: Dimensions.get('window').width / 4,
+        width: Dimensions.get('window').width / 1,
+        borderWidth: 1,
+        borderRadius: 25,
+        borderColor: 'grey',
+        flex: 0.3,
         backgroundColor: 'white',
-        marginTop: 10,
-        marginBottom: 10,
-        marginLeft: 30,
-        marginRight: 30,
-        paddingLeft: 16
+        position: 'absolute'
     },
-    button: {
-        backgroundColor: '#788eec',
-        marginLeft: 30,
-        marginRight: 30,
-        marginTop: 20,
-        height: 48,
-        borderRadius: 5,
-        alignItems: "center",
-        justifyContent: 'center'
+    titleb: {
+        color: 'grey',
+        textAlign: "center",
+        marginTop: 50,
+        fontSize: 25,
+        fontWeight: 'bold',
     },
     buttonTitle: {
         color: 'white',
         fontSize: 16,
         fontWeight: "bold"
     },
+    flat: {
+        marginTop: Dimensions.get('window').width / 4,
+    },
     text: {
         color: 'white',
         position: 'absolute',
-        bottom: 0,
+        top: 0,
         left: 30,
         fontSize: 17,
     },
@@ -41,7 +40,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
         position: 'absolute',
-        bottom: 30,
+        bottom: 0,
         left: 30,
         fontSize: 22,
     },
@@ -52,9 +51,10 @@ export default StyleSheet.create({
         top: 0,
         left: 10,
         flex: 0.3,
-        marginTop: 30,
+        marginTop: 10,
+        marginBottom: 15,
     },
-    container: {
+    boxtitle: {
         top: 170,
     },
     star: {

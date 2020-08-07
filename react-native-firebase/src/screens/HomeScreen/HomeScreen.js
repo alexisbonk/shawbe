@@ -40,8 +40,7 @@ export default class HomeScreen extends React.Component {
 
   _ShareMessage=(data)=>
   {
-      let message = "Vous aussi venez manger au " + data.Name;
-      console.log(message);
+      let message = "Venez découvrir le " + data.Name + "\nPour ça rdv au " + data.Adresse;
         Share.share({
             message: message
         }).then(result => console.log(result)).catch(errorMsg => console.log(errorMsg));
@@ -87,9 +86,12 @@ export default class HomeScreen extends React.Component {
         </View>
     );
     var displaylist = (
-        <View style={styles.containerForm}>
+        <View style={styles.container}>
+          <View style={styles.titlebox}>
+            <Text style={styles.titleb}>Mes restaurants</Text>
+          </View>
           <FlatList
-            style={{}}
+            style={styles.flat}
             data={this.state.data}
             showsVerticalScrollIndicator={false}
             renderItem={({item}) => (
@@ -102,7 +104,7 @@ export default class HomeScreen extends React.Component {
                 <ImageBackground
                     source={{ uri: item.Photo }}
                     style={styles.box}
-                    imageStyle={{ borderRadius: 50 }}
+                    imageStyle={{ borderRadius: 30 }}
                     >
                     <TouchableOpacity
                         key={item._id}
@@ -112,7 +114,7 @@ export default class HomeScreen extends React.Component {
                         }}>
                             {this._ischecked(item.Name) === true ? displaychecked : displayunchecked}
                     </TouchableOpacity>
-                    <View style={styles.container}>
+                    <View style={styles.boxtitle}>
                         <Text style={styles.textTitle}>{item.Name}</Text>
                         <Text style={styles.text}>{item.Adresse}</Text>
                     </View>
