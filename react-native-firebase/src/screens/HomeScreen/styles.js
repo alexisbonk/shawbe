@@ -7,12 +7,14 @@ export default StyleSheet.create({
     titlebox: {
         height: Dimensions.get('window').width / 4,
         width: Dimensions.get('window').width / 1,
-        borderWidth: 1,
+        borderBottomWidth: 1,
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        position: 'absolute',
         borderRadius: 25,
         borderColor: 'grey',
         flex: 0.3,
-        backgroundColor: 'white',
-        position: 'absolute'
+        backgroundColor: 'white'
     },
     titleb: {
         color: 'grey',
@@ -31,18 +33,21 @@ export default StyleSheet.create({
     },
     text: {
         color: 'white',
-        position: 'absolute',
-        top: 0,
-        left: 30,
         fontSize: 17,
+        marginTop: Dimensions.get('window').width / 80,
+        marginLeft: Dimensions.get('window').width / 20,
+        borderColor: 'black',
+        textShadowOffset:{width: 5, height: 5},
+        textShadowRadius:10,
     },
     textTitle: {
         fontWeight: 'bold',
         color: 'white',
-        position: 'absolute',
-        bottom: 0,
-        left: 30,
+        marginTop: Dimensions.get('window').width / 6,
+        marginLeft: Dimensions.get('window').width / 20,
         fontSize: 22,
+        textShadowOffset:{width: 5, height: 5},
+        textShadowRadius:10,
     },
     box: {  
         height: Dimensions.get('window').width / 2,
@@ -55,14 +60,12 @@ export default StyleSheet.create({
         marginBottom: 15,
     },
     boxtitle: {
-        top: 170,
     },
     star: {
-        position: 'absolute',
         width: 40,
         height: 50,
-        left: 300,
-        top: 20,
+        marginLeft: Dimensions.get('window').width / 1.3,
+        marginTop: Dimensions.get('window').width / 30,
     },
     logo: {
         height: 40,
